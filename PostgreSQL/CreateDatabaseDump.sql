@@ -1,0 +1,1 @@
+pg_dump.exe --host 127.0.0.1 --port 5432 --username USER_NAME --format custom --blobs --verbose --file "FILE_NAME.backup" DATABASE_NAME
