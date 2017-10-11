@@ -14,9 +14,9 @@ SELECT v.column,
        v.max_for_table,
        v.value_for_sequence
 FROM
-  (SELECT a.attname AS COLUMN,
-          t.relname AS TABLE,
-          s.relname AS SEQUENCE,
+  (SELECT a.attname AS column,
+          t.relname AS table,
+          s.relname AS sequence,
           Eval('SELECT MAX("' || a.attname || '") FROM ' || n.nspname || '."' || t.relname || '"') AS max_for_table,
           Eval('SELECT last_value FROM "' || s.relname || '"') AS value_for_sequence
    FROM pg_class s
