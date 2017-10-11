@@ -27,4 +27,4 @@ FROM
 WHERE v.max_for_table IS NOT NULL
   AND v.max_for_table > v.value_for_sequence;
 
-DROP FUNCTION IF EXISTS Eval(expression text);
+DROP FUNCTION Eval(expression text);
