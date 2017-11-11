@@ -1,0 +1,1 @@
+SELECT REGEXP_REPLACE('Number 1: 3,5; Number 2: 123,456; Number 3: 557.44; Not Number 1: 3,,4; Not Number 2: 555,; Not Number 3: ,12;', '(\d+)([,]{1})(\d+)', '\1.\3', 'g')
