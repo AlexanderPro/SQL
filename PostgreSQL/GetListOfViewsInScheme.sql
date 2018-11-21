@@ -1,0 +1,1 @@
+SELECT * FROM INFORMATION_SCHEMA.views WHERE table_schema IN ('public')
