@@ -30,7 +30,7 @@ BEGIN
         query := 'SELECT COUNT(*) FROM ' || foreign_key_record.table_schema || '."' || foreign_key_record.table_name || '" WHERE "' || foreign_key_record.column_name || '"=' || primary_key_value;
         EXECUTE query INTO count;
         IF count > 0 THEN
-            title := foreign_key_record.table_schema || '."' || foreign_key_record.table_name || '","' || foreign_key_record.column_name || '"';
+            title := foreign_key_record.table_schema || '."' || foreign_key_record.table_name || '"."' || foreign_key_record.column_name || '"';
             RAISE NOTICE '%', title;
         END IF;
     END LOOP;
